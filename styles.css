@@ -1,0 +1,232 @@
+*{
+  padding-bottom: 10px;
+}
+
+body{
+    margin: 0%;              /* establece el margen para los cuatro lados. */
+    padding: 0;             /*propiedad o relleno que se crea alrededor del contenido de un elemento dentro de los bordes definidos y sirve para dar formato y diseño a una página web.*/
+  }
+
+
+#background{                /*La propiedad background es un atajo para definir los valores individuales del fondo en una única regla CSS.*/
+    position:fixed;         /*El posicionamiento fixed hace que un elemento se coloque respecto al viewport, Le dices dónde posicionarse al elemento, y se queda ahí mientras el usuario hace scroll.*/
+    top: 0;                 /*arriba*/
+    left: 0;                /*izquierda*/
+    width: 100%;            /*ancho*/
+    height: 100%;           /*altura*/
+    background: linear-gradient(to right, #000000, #000066, #0000CC, #000000 ); /*Grado de inclinación del terreno respecto a un plano horizontal. */
+    animation: animateBackground 5s linear infinite;                                     /*animacion*/
+  }
+
+/*El scroll se utiliza para medir el grado de interés e interacción de los usuarios con un sitio web. Permite saber hasta cuándo está dispuesto leer un usuario y qué formatos/diseños le enganchan más a nuestra web, presentando un mayor tiempo de permanencia.*/
+/*El viewport es una etiqueta meta de HTML 5 que se utiliza para escalar el contenido de una web acorde a los diferentes dispositivos. Es por ello que se considera una parte fundamental del diseño responsive.*/
+
+.logo-container {
+  position: relative;
+  left: 40%;
+  width: 100px;
+  height: 100px;
+  top: -3em;
+  background-color: rgba(139, 0, 0, 9.0);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  z-index: 9999;          /*z-index indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+  animation: logo-animation 3s ease-in-out infinite alternate;
+}
+
+.logo-animation {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: move-up-down 3s ease-in-out infinite alternate;
+  display: flex;
+  margin-top: -6px;
+}
+
+.logo-letter {
+  font-size: 100px; /* Ajusta el tamaño de la letra según sea necesario */
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  mix-blend-mode: overlay;
+}
+                           
+.container{
+    position:absolute;     /*hace que un elemento se coloque respecto a su contenedor posicionado mas cercano, si no encuentra ningún contenedor cercano, el elemento se colocara respecto al viewport.*/
+    top: 60%;              /*posiciona los input con el 50% del tamaño total de la pagina desde arriba hasta abajo*/
+    left: 50%;             /*posiciona los input con distancia de izquierda a derecha del 50% del tamaño total de la pagina*/
+    transform: translate(-50%, -50%); /*La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.*/
+    text-align: center;    /*La propiedad text-align permite establecer la alineación horizontal de un bloque de texto.*/
+    color: white;
+    margin-top: 18px;   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.buttons{
+    position:absolute;     /*hace que un elemento se coloque respecto a su contenedor posicionado mas cercano, si no encuentra ningún contenedor cercano, el elemento se colocara respecto al viewport.*/
+    top: 110%;              /*posiciona los input con el 50% del tamaño total de la pagina desde arriba hasta abajo*/
+    left: 50.5%;             /*posiciona los input con distancia de izquierda a derecha del 50% del tamaño total de la pagina*/
+    transform: translate(-50%, -50%); /*La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.*/
+    text-align: center;    /*La propiedad text-align permite establecer la alineación horizontal de un bloque de texto.*/
+    color: white;
+    margin-top: 18px;   
+    margin: 0 auto;
+    font-size: 50px; /* Tamaño de fuente deseado */
+    padding: 30px 50px; /* Ajusta el padding según sea necesario */
+}
+
+
+
+h1{
+    font-size: 20px;       /*La propiedad font-size especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex . all elements.*/
+    position: relative;
+    z-index: 2; /* Valor de z-index superior al del fondo animado */
+    color: #fff; /* Color del texto */
+    top: 50%; /* Ajusta el valor para mover el h1 hacia abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+textarea{
+    width:200px;
+    height:200px;
+    margin:30px;
+    padding:30px;
+}
+
+.text-area-container {
+  display: flex;
+}
+
+.text-area {
+  margin-right: auto; /* Ajusta el valor según el espacio deseado */
+}
+
+.mensaje-container{
+  display:flex;
+}
+
+.mensaje{
+    background-image: url("imagenes/bot-android.jpg"); /*pongo la imagen dentro de la caja mensaje*/
+    background-repeat: no-repeat;                 /*para que no ponga la imagen dentro de la caja repetida, sino solo una*/
+    margin-right: auto;
+    background-position: center bottom 20px;
+}
+
+::placeholder{color: #0A3871;} /*color de letras dentro del formulario*/
+  .text-area:focus{              /*La pseudo-clase :focus CSS representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado*/
+    outline: none;               /*Es utilizada para remover el contorno que se ubica fuera de los límites del borde de un elemento.*/
+  }
+
+  .mensaje:focus{
+    outline: none;               /*Es utilizada para remover el contorno que se ubica fuera de los límites del borde de un elemento. Para que no se resalte cuando nos ponemos dentro de la caja*/
+  }
+  
+.btn-encriptar{
+    padding: 10px 20px;          /*tamaño de botones*/
+    border-radius: 24px;          /*redondea borde el botton copiar*/
+    background-color: #a5c1ca; /*color dentro de botones*/
+    color: white;              /*color de letra dentro de los botones*/
+    border: none;                /*ningun borde en los botones*/
+    cursor: pointer;             /*cambia forma de cursor al pasar por los botones*/
+}
+
+.btn-desencriptar{
+    padding: 10px 20px;          /*tamaño de botones*/
+    border-radius: 24px;          /*redondea borde el botton copiar*/
+    background-color: #a5c1ca; /*color dentro de botones*/
+    color: white;              /*color de letra dentro de los botones*/
+    border: none;                /*ningun borde en los botones*/
+    cursor: pointer;             /*cambia forma de cursor al pasar por los botones*/
+}
+
+.copiar{
+  padding: 10px 20px;          /*tamaño de botones*/
+  border-radius: 24px;          /*redondea borde el botton copiar*/
+  background-color: #a5c1ca; /*color dentro de botones*/
+  color: white;              /*color de letra dentro de los botones*/
+  border: none;                /*ningun borde en los botones*/
+  cursor: pointer;             /*cambia forma de cursor al pasar por los botones*/           
+  margin-top: 10px;            /*margen superior entre boton copiar y otros botones*/
+  }
+
+footer .container {
+    display: flex;
+    align-items: center;
+    color: #495057;             /*color de letra de informacion*/
+    font-size: 18px;              /*tamaño de letra: nos queda un poco mas pequeño*/
+    position:absolute;     /*hace que un elemento se coloque respecto a su contenedor posicionado mas cercano, si no encuentra ningún contenedor cercano, el elemento se colocara respecto al viewport.*/
+    left: 50%;             /*posiciona los input con distancia de izquierda a derecha del 50% del tamaño total de la pagina*/
+    transform: translate(-50%, -50%); /*La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.*/
+    text-align: center;    /*La propiedad text-align permite establecer la alineación horizontal de un bloque de texto.*/
+    top: 150%;
+  }
+  
+footer .container img {
+    margin-right: 10px; /* Ajusta el margen según tus necesidades */
+  }
+  
+@keyframes animateBackground{ /*La regla arroba @keyframes permite a los autores controlar los pasos intermedios en una secuencia de animación CSS mediante el establecimiento de keyframes (o puntos de trayectoria) a lo largo de la secuencia de animación que debe ser alcanzado por determinados puntos durante la animación.*/
+       0%{
+          background-position: 0 0; /*Background es una palabra inglesa que significa 'fondo', 'debajo de la superficie' o 'trasfondo'*/
+       }
+       100%{
+          background-position: 1000px 0;
+       }
+}
+
+@keyframes logo-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes move-up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5px); /*me dice hasta donde se desplaza la letra e de arriba abajo*/
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    
+  }
+
+  .logo-container{
+    left:35%;
+    top:20%;
+  }
+
+  .container h1{
+    margin-top: 30%;
+    margin-bottom: -1em;
+  }
+
+  .buttons{
+    top: 140%;
+  }
+
+  .btn-encriptar{
+    top: 95%;
+    margin-bottom: 10px;
+  }
+
+  footer .container{
+    top: 170%;
+  }
+
+}
+
