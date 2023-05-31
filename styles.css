@@ -43,7 +43,7 @@ body{
   transform: translate(-50%, -50%);
   animation: move-up-down 3s ease-in-out infinite alternate;
   display: flex;
-  margin-top: -6px;
+  margin-top: -3px;
 }
 
 .logo-letter {
@@ -153,6 +153,7 @@ textarea{
   border: none;                /*ningun borde en los botones*/
   cursor: pointer;             /*cambia forma de cursor al pasar por los botones*/           
   margin-top: 10px;            /*margen superior entre boton copiar y otros botones*/
+  margin-left: 120px;
   }
 
 footer .container {
@@ -164,7 +165,7 @@ footer .container {
     left: 50%;             /*posiciona los input con distancia de izquierda a derecha del 50% del tamaño total de la pagina*/
     transform: translate(-50%, -50%); /*La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.*/
     text-align: center;    /*La propiedad text-align permite establecer la alineación horizontal de un bloque de texto.*/
-    top: 150%;
+    top: 140%;
   }
   
 footer .container img {
@@ -199,14 +200,14 @@ footer .container img {
 }
 
 
-
+/*otros dispositivos*/
 @media only screen and (max-width: 768px) {
   body {
     
   }
 
   .logo-container{
-    left:35%;
+    left:32%;
     top:20%;
   }
 
@@ -230,3 +231,28 @@ footer .container img {
 
 }
 
+/* Estilos para tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Agrega aquí tus estilos específicos para tablet */
+  body{
+    overflow-x: hidden;
+  }
+  #background {
+    max-width: 100%; /* Establece un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+  }
+
+  .buttons{
+    margin-top: -5em;
+  }
+  .buttons .copiar{
+    max-width: 100%; /* Establece un ancho máximo para el contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    margin-top: 10px;
+  }
+
+  footer .container{
+    margin-top: -12em;
+  }
+
+}
